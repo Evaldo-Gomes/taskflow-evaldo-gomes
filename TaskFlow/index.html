@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9ff">
+  <title>TaskFlow — suas tarefas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="TaskFlow, início"><span class="brand-mark" aria-hidden="true">✓</span><span>TaskFlow<span class="brand-dot">.</span></span></a>
+      <p class="side-label">NAVEGAÇÃO</p>
+      <nav class="nav-list" id="status-nav" aria-label="Filtrar por situação">
+        <button class="nav-item is-active" type="button" data-status=""><span>▦</span>Visão geral</button>
+        <button class="nav-item" type="button" data-status="todo"><span>○</span>A fazer</button>
+        <button class="nav-item" type="button" data-status="in_progress"><span>◷</span>Em andamento</button>
+        <button class="nav-item" type="button" data-status="completed"><span>✓</span>Concluídas</button>
+      </nav>
+      <div class="category-heading"><p class="side-label">CATEGORIAS</p><button id="add-category-shortcut" class="icon-button" type="button" aria-label="Nova categoria">＋</button></div>
+      <nav id="category-nav" class="nav-list category-list" aria-label="Filtrar por categoria"></nav>
+      <div class="sidebar-foot"><span class="save-indicator"><span class="save-dot"></span>Salvo neste dispositivo</span></div>
+    </aside>
+
+    <main class="main-area" id="inicio">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark" aria-hidden="true">✓</span>TaskFlow</div><span class="local-label">GERENCIADOR PESSOAL</span></header>
+      <section class="content">
+        <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+        <div class="page-heading"><div><p class="eyebrow">SEU ESPAÇO DE ORGANIZAÇÃO</p><h1>Visão geral</h1><p class="subtitle">Organize suas tarefas e acompanhe o que precisa ser feito.</p></div><button id="new-task" class="button button-primary" type="button"><span aria-hidden="true">＋</span> Nova tarefa</button></div>
+
+        <section class="filter-panel" aria-label="Filtros de tarefas">
+          <div class="filter-title"><span class="filter-symbol" aria-hidden="true">☷</span><strong>Filtrar tarefas</strong><button id="add-category-inline" class="category-inline" type="button">Gerenciar categorias</button></div>
+          <div class="filters">
+            <label>Categoria<select id="filter-category"><option value="">Todas as categorias</option></select></label>
+            <label>Situação<select id="filter-status"><option value="">Todas as situações</option><option value="todo">A fazer</option><option value="in_progress">Em andamento</option><option value="completed">Concluída</option></select></label>
+            <label>Prioridade<select id="filter-priority"><option value="">Todas as prioridades</option><option value="high">Alta</option><option value="medium">Média</option><option value="low">Baixa</option></select></label>
+            <button id="clear-filters" class="button button-quiet clear-button" type="button">Limpar filtros</button>
+          </div>
+        </section>
+
+        <section class="task-section" aria-labelledby="tasks-heading"><div class="list-heading"><div><h2 id="tasks-heading">Minhas tarefas</h2><span id="task-count" class="count-label"></span></div><span class="sort-label">Ordenadas por vencimento</span></div><div id="task-list" class="task-list"></div><div id="empty-state" class="empty-state" hidden><div class="empty-mark" aria-hidden="true">✓</div><h3 id="empty-title">Tudo começa com uma tarefa</h3><p id="empty-copy">Adicione sua primeira tarefa para organizar seu dia.</p><button id="empty-action" class="button button-primary" type="button">＋ Nova tarefa</button></div></section>
+        <footer class="page-foot">Seus dados ficam armazenados localmente neste navegador.</footer>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="task-dialog" class="dialog" aria-labelledby="task-dialog-title"><form id="task-form" novalidate><div class="dialog-header"><div><p class="eyebrow">DETALHES DA TAREFA</p><h2 id="task-dialog-title">Nova tarefa</h2></div><button class="icon-button" type="button" data-close="task-dialog" aria-label="Fechar formulário">×</button></div><div class="dialog-body">
+    <label>Título <span class="required">*</span><input name="title" maxlength="160" required autocomplete="off" placeholder="Ex.: Preparar apresentação"><span class="field-error" data-error="title"></span></label>
+    <label>Descrição <span class="optional">(opcional)</span><textarea name="description" rows="3" maxlength="1200" placeholder="Adicione detalhes para esta tarefa"></textarea><span class="field-error" data-error="description"></span></label>
+    <div class="form-grid"><label>Categoria<select name="categoryId"><option value="">Sem categoria</option></select></label><label>Data de vencimento<input name="dueDate" type="date"><button class="clear-date" type="button" id="clear-date">Remover data</button><span class="field-error" data-error="dueDate"></span></label></div>
+    <div class="form-grid"><label>Prioridade<select name="priority"><option value="low">Baixa</option><option value="medium" selected>Média</option><option value="high">Alta</option></select></label><label>Situação<select name="status"><option value="todo" selected>A fazer</option><option value="in_progress">Em andamento</option><option value="completed">Concluída</option></select></label></div>
+  </div><div class="dialog-actions"><button class="button button-secondary" type="button" data-close="task-dialog">Cancelar</button><button class="button button-primary" type="submit">Salvar tarefa</button></div></form></dialog>
+
+  <dialog id="category-dialog" class="dialog dialog-small" aria-labelledby="category-dialog-title"><form id="category-form" novalidate><div class="dialog-header"><div><p class="eyebrow">ORGANIZAÇÃO</p><h2 id="category-dialog-title">Nova categoria</h2></div><button class="icon-button" type="button" data-close="category-dialog" aria-label="Fechar formulário">×</button></div><div class="dialog-body"><label>Nome da categoria<input name="name" maxlength="60" required placeholder="Ex.: Trabalho"><span class="field-error" data-error="name"></span></label></div><div class="dialog-actions"><button class="button button-secondary" type="button" data-close="category-dialog">Cancelar</button><button class="button button-primary" type="submit">Salvar categoria</button></div></form></dialog>
+
+  <dialog id="category-manager-dialog" class="dialog dialog-small" aria-labelledby="category-manager-title"><div class="dialog-header"><div><p class="eyebrow">ORGANIZAÇÃO</p><h2 id="category-manager-title">Categorias</h2></div><button class="icon-button" type="button" data-close="category-manager-dialog" aria-label="Fechar categorias">×</button></div><div id="category-manager-list" class="category-manager-list"></div><div class="dialog-actions"><button id="manager-add-category" class="button button-primary" type="button">＋ Nova categoria</button></div></dialog>
+
+  <dialog id="confirm-dialog" class="dialog dialog-small" aria-labelledby="confirm-title"><div class="dialog-header"><div><p class="eyebrow">CONFIRMAÇÃO</p><h2 id="confirm-title">Excluir item?</h2></div><button class="icon-button" type="button" data-close="confirm-dialog" aria-label="Cancelar e fechar">×</button></div><div class="dialog-body"><p id="confirm-copy">Esta ação não pode ser desfeita.</p></div><div class="dialog-actions"><button class="button button-secondary" type="button" data-close="confirm-dialog">Cancelar</button><button id="confirm-delete" class="button button-danger" type="button">Excluir</button></div></dialog>
+</body>
+</html>

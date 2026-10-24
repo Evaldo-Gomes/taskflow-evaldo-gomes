@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#004ac6","surface-container-highest":"#d3e4fe","on-secondary":"#ffffff","surface-variant":"#d3e4fe","primary-fixed-dim":"#b4c5ff","secondary-fixed-dim":"#93ccff","on-primary-fixed":"#00174b","primary-fixed":"#dbe1ff","on-tertiary-fixed":"#002109","on-secondary-fixed":"#001d31","outline-variant":"#c3c6d7","surface-container":"#e5eeff","on-error":"#ffffff","inverse-on-surface":"#eaf1ff","secondary-fixed":"#cce5ff","surface-bright":"#f8f9ff","outline":"#737686","inverse-primary":"#b4c5ff","surface-dim":"#cbdbf5","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#005320","background":"#f8f9ff","secondary":"#006398","error":"#ba1a1a","error-container":"#ffdad6","on-primary-fixed-variant":"#003ea8","on-primary-container":"#eeefff","secondary-container":"#5bb8fe","on-surface":"#0b1c30","surface-container-high":"#dce9ff","on-surface-variant":"#434655","tertiary":"#006329","tertiary-fixed":"#7ffc97","on-secondary-fixed-variant":"#004b73","inverse-surface":"#213145","on-error-container":"#93000a","on-secondary-container":"#00476e","surface":"#f8f9ff","on-tertiary":"#ffffff","on-tertiary-container":"#c7ffca","primary-container":"#2563eb","surface-container-lowest":"#ffffff","on-primary":"#ffffff","on-background":"#0b1c30","tertiary-container":"#007f36","surface-tint":"#0053db","tertiary-fixed-dim":"#62df7d"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"2rem","margin-lg":"2.5rem","margin":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter":"1rem","margin-md":"1.5rem","space-xs":"0.25rem","gutter-lg":"2rem","space-md":"1rem","gutter-md":"1.5rem"},fontFamily:{"label-md":["Inter"],"headline-lg-mobile":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"label-lg":["Inter"]},fontSize:{"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"500"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","letterSpacing":"0","fontWeight":"400"}],"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","letterSpacing":"0","fontWeight":"400"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface text-on-surface min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0 overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">checklist_rtl</span></div><div class="flex items-center gap-1"><span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">TaskFlow</span><span class="w-1.5 h-1.5 rounded-full bg-primary mb-2"></span></div></div><div class="px-space-md pt-space-xs pb-space-sm"><div class="text-label-sm font-label-sm text-outline uppercase tracking-wider px-space-sm mb-space-xs">Navegação</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group min-h-[2.75rem]" data-path="visao-geral" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Visão Geral</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant group-hover:bg-surface-container-highest transition-colors">18</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group min-h-[2.75rem]" data-path="a-fazer" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span><span class="font-label-lg text-label-lg">A Fazer</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant group-hover:bg-surface-container-highest transition-colors">8</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group min-h-[2.75rem]" data-path="em-andamento" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">timelapse</span><span class="font-label-lg text-label-lg">Em Andamento</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant group-hover:bg-surface-container-highest transition-colors">6</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group min-h-[2.75rem]" data-path="concluidas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">task_alt</span><span class="font-label-lg text-label-lg">Concluídas</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant group-hover:bg-surface-container-highest transition-colors">4</span></a></nav></div><div class="px-space-md pt-space-sm pb-space-md flex-1"><div class="flex items-center justify-between px-space-sm mb-space-xs"><span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Categorias</span></div><div class="flex flex-col gap-space-xs"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all min-h-[2.75rem]" data-path="categoria-trabalho" href="#"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span class="font-body-md text-body-md">Trabalho</span></div><span class="material-symbols-outlined text-[16px] text-outline opacity-0 hover:opacity-100 transition-opacity">more_horiz</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all min-h-[2.75rem]" data-path="categoria-pessoal" href="#"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span><span class="font-body-md text-body-md">Pessoal</span></div><span class="material-symbols-outlined text-[16px] text-outline opacity-0 hover:opacity-100 transition-opacity">more_horiz</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all min-h-[2.75rem]" data-path="categoria-estudos" href="#"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span><span class="font-body-md text-body-md">Estudos</span></div><span class="material-symbols-outlined text-[16px] text-outline opacity-0 hover:opacity-100 transition-opacity">more_horiz</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all min-h-[2.75rem]" data-path="categoria-saude" href="#"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-error"></span><span class="font-body-md text-body-md">Saúde</span></div><span class="material-symbols-outlined text-[16px] text-outline opacity-0 hover:opacity-100 transition-opacity">more_horiz</span></a><button class="flex items-center gap-space-sm px-space-md py-space-sm mt-space-xs rounded-xl text-primary hover:bg-primary-fixed hover:text-on-primary-fixed-variant transition-all font-label-md text-label-md min-h-[2.75rem] text-left" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nova categoria</span></button></div></div></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span><span class="font-label-sm text-label-sm">Salvo localmente</span></div><button class="flex items-center gap-1 font-label-sm text-label-sm text-outline hover:text-primary transition-colors py-1 px-1.5 rounded" title="Limpar filtros ativos" type="button"><span class="material-symbols-outlined text-[14px]">filter_alt_off</span><span>Limpar</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-lg"><div class="flex items-center gap-space-sm"><div class="flex items-center bg-surface-container px-space-md py-1.5 rounded-xl text-on-surface-variant w-80 max-w-md focus-within:ring-2 focus-within:ring-primary focus-within:bg-surface-container-lowest transition-all"><span class="material-symbols-outlined text-[20px] text-outline mr-2">search</span><input class="bg-transparent border-0 outline-none text-body-sm font-body-sm w-full placeholder:text-outline text-on-surface" placeholder="Buscar tarefas ou etiquetas (Ctrl + K)..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificações" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="Configurações" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-gutter-lg pb-space-xl"><div class="flex flex-col w-full relative">
+<!-- Top Error Feedback Banner (Heuristic 9: Help users recognize, diagnose, and recover from errors) -->
+<aside aria-live="assertive" class="mb-space-lg w-full bg-error-container text-on-error-container px-space-md py-space-sm rounded-xl flex items-center justify-between shadow-sm transition-all duration-300" id="system-error-banner">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">error</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-error-container font-semibold">Falha de sincronização</span>
+<span class="font-body-sm text-body-sm text-on-error-container opacity-90">Não foi possível salvar os dados. Verifique a conexão e tente novamente.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest/60 text-on-error-container font-label-md text-label-md hover:bg-surface-container-lowest transition-colors flex items-center gap-1" onclick="document.getElementById('system-error-banner').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Reconectar</span>
+</button>
+<button aria-label="Fechar alerta" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-error-container hover:bg-surface-container-lowest/40 transition-colors" onclick="document.getElementById('system-error-banner').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</aside>
+<!-- Background Content Stage: Dashboard overview dimmed by the modal backdrop context -->
+<div class="w-full grid grid-cols-12 gap-gutter-lg filter blur-[2px] opacity-40 select-none pointer-events-none">
+<!-- Quick Status Cards -->
+<div class="col-span-12 grid grid-cols-4 gap-gutter-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total de Tarefas</span>
+<div class="font-headline-lg text-headline-lg text-on-surface mt-1">18</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">checklist</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Em Andamento</span>
+<div class="font-headline-lg text-headline-lg text-secondary mt-1">6</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">timelapse</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Concluídas</span>
+<div class="font-headline-lg text-headline-lg text-tertiary mt-1">4</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Categorias</span>
+<div class="font-headline-lg text-headline-lg text-on-surface mt-1">4</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">folder_special</span>
+</div>
+</div>
+</div>
+<!-- Dummy Task List Items -->
+<div class="col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Minhas Tarefas Recentes</span>
+<span class="font-label-sm text-label-sm text-outline">Filtro: Todas</span>
+</div>
+<div class="space-y-2">
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-4 h-4 rounded bg-outline-variant"></span>
+<span class="font-body-md text-body-md text-on-surface">Finalizar sprint de arquitetura de dados</span>
+</div>
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm">Trabalho</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-4 h-4 rounded bg-outline-variant"></span>
+<span class="font-body-md text-body-md text-on-surface">Agendar consulta cardiológica preventiva</span>
+</div>
+<span class="px-2 py-1 rounded bg-error-container text-on-error-container text-label-sm font-label-sm">Saúde</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-4 h-4 rounded bg-outline-variant"></span>
+<span class="font-body-md text-body-md text-on-surface">Capítulo 4: Engenharia de Usabilidade Nielsen</span>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm">Estudos</span>
+</div>
+</div>
+</div>
+<!-- Category Distribution Widget -->
+<div class="col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Distribuição das Tarefas</span>
+<div class="w-full flex items-center justify-center py-space-md">
+<svg class="w-36 h-36" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#eff4ff" stroke-width="12"></circle>
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#004ac6" stroke-dasharray="75 251" stroke-dashoffset="0" stroke-width="12"></circle>
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#006398" stroke-dasharray="100 251" stroke-dashoffset="-75" stroke-width="12"></circle>
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#006329" stroke-dasharray="50 251" stroke-dashoffset="-175" stroke-width="12"></circle>
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#ba1a1a" stroke-dasharray="26 251" stroke-dashoffset="-225" stroke-width="12"></circle>
+</svg>
+</div>
+<div class="text-center font-label-sm text-label-sm text-outline">10 tarefas categorizadas</div>
+</div>
+</div>
+<!-- MODAL LAYER 1: Gerenciamento de Categorias (Interactive Center Overlay) -->
+<div class="fixed inset-0 z-40 bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-space-md transition-opacity duration-200" id="category-manager-overlay">
+<section aria-labelledby="modal-category-title" class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-2xl overflow-hidden flex flex-col relative transition-all">
+<!-- Modal Header -->
+<header class="px-space-xl pt-space-xl pb-space-md flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">folder_managed</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface" id="modal-category-title">Gerenciar categorias</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Crie, renomeie ou remova categorias para organizar suas tarefas.</p>
+</div>
+</div>
+<button aria-label="Fechar diálogo de categorias" class="w-10 h-10 rounded-xl flex items-center justify-center text-outline hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</header>
+<!-- Modal Body -->
+<div class="px-space-xl py-space-sm flex flex-col gap-space-lg">
+<!-- Add Category Form with Validation State -->
+<form class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs" id="new-category-form" onsubmit="event.preventDefault(); handleCategoryAdd();">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="category-name-input">
+<span>Nome da categoria</span>
+<span class="font-label-sm text-label-sm text-outline" id="char-counter">0/30</span>
+</label>
+<div class="flex items-start gap-space-sm mt-1">
+<div class="flex-1 flex flex-col">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-[18px] text-outline absolute left-3 pointer-events-none">label</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="category-name-input" maxlength="30" oninput="handleInputChange(this)" placeholder="Ex.: Projetos de Design, Finanças..." type="text"/>
+</div>
+<!-- Real-time Validation Message (Heuristic 5: Error Prevention) -->
+<div class="hidden mt-1 text-label-sm font-label-sm text-error flex items-center gap-1" id="input-validation-msg">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span id="input-validation-text">Este nome de categoria já existe.</span>
+</div>
+</div>
+<button class="h-11 px-space-lg rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-1.5 hover:bg-primary-container shadow-sm transition-all shrink-0 active:scale-95" id="btn-add-category" type="submit">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Adicionar</span>
+</button>
+</div>
+</form>
+<!-- Existing Categories List -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Categorias ativas (4)</span>
+<span class="font-label-sm text-label-sm text-outline">Tarefas vinculadas</span>
+</div>
+<ul class="flex flex-col gap-2 mt-1" role="list">
+<!-- Category Item: Trabalho -->
+<li class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors rounded-xl p-space-md flex items-center justify-between group shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-primary-fixed/40"></div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Trabalho</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 tarefas associadas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg text-secondary font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-1" title="Renomear categoria 'Trabalho'" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Renomear</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-error font-label-md text-label-md hover:bg-error-container/40 transition-colors flex items-center gap-1" onclick="openDeleteDialog('Trabalho', 3)" title="Excluir categoria 'Trabalho'" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Excluir</span>
+</button>
+</div>
+</li>
+<!-- Category Item: Pessoal -->
+<li class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors rounded-xl p-space-md flex items-center justify-between group shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-3.5 h-3.5 rounded-full bg-secondary ring-4 ring-secondary-fixed/40"></div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Pessoal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 tarefas associadas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg text-secondary font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-1" title="Renomear categoria 'Pessoal'" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Renomear</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-error font-label-md text-label-md hover:bg-error-container/40 transition-colors flex items-center gap-1" onclick="openDeleteDialog('Pessoal', 4)" title="Excluir categoria 'Pessoal'" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Excluir</span>
+</button>
+</div>
+</li>
+<!-- Category Item: Estudos -->
+<li class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors rounded-xl p-space-md flex items-center justify-between group shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-3.5 h-3.5 rounded-full bg-tertiary ring-4 ring-tertiary-fixed/40"></div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Estudos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2 tarefas associadas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg text-secondary font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-1" title="Renomear categoria 'Estudos'" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Renomear</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-error font-label-md text-label-md hover:bg-error-container/40 transition-colors flex items-center gap-1" onclick="openDeleteDialog('Estudos', 2)" title="Excluir categoria 'Estudos'" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Excluir</span>
+</button>
+</div>
+</li>
+<!-- Category Item: Saúde -->
+<li class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors rounded-xl p-space-md flex items-center justify-between group shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-3.5 h-3.5 rounded-full bg-error ring-4 ring-error-container/40"></div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Saúde</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 tarefa associada</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg text-secondary font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-1" title="Renomear categoria 'Saúde'" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Renomear</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-error font-label-md text-label-md hover:bg-error-container/40 transition-colors flex items-center gap-1" onclick="openDeleteDialog('Saúde', 1)" title="Excluir categoria 'Saúde'" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Excluir</span>
+</button>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Modal Footer -->
+<footer class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-between mt-space-md">
+<div class="flex items-center gap-space-xs text-outline text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+<span>Dica: Use categorias para filtrar suas visualizações</span>
+</div>
+<button class="h-11 px-space-lg rounded-xl bg-surface-container-highest text-on-surface hover:bg-surface-container font-label-lg text-label-lg transition-colors" type="button">
+          Concluído
+        </button>
+</footer>
+</section>
+</div>
+<!-- MODAL LAYER 2: Confirmação de Exclusão (Active Foreground Confirmation Dialog) -->
+<!-- Designed strictly around Nielsen Heuristic #3 (User Control & Freedom) & Heuristic #5 (Error Prevention) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-space-md animate-fadeIn" id="delete-confirmation-overlay">
+<div aria-describedby="dialog-delete-description" aria-labelledby="dialog-delete-title" aria-modal="true" class="bg-surface-container-lowest rounded-xl shadow-2xl w-full max-w-lg overflow-hidden flex flex-col border-2 border-error/20 scale-100 transition-transform" role="alertdialog">
+<div class="p-space-xl flex flex-col gap-space-md">
+<!-- Warning Icon and Title -->
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold" id="dialog-delete-title">
+              Excluir categoria ‘<span id="category-target-name">Trabalho</span>’?
+            </h3>
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-semibold mt-0.5">Ação destrutiva reversível apenas manualmente</span>
+</div>
+</div>
+<!-- Nielsen Usability Heuristic Clarification Box (Explicação Clara de Consequências) -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-2">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="dialog-delete-description">
+            Tem certeza de que deseja excluir esta categoria? As <strong class="font-semibold text-on-surface" id="category-task-count">3 tarefas</strong> associadas não serão apagadas, mas passarão a ficar sem categoria definida.
+          </p>
+<div class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Nenhum dado das tarefas associadas será perdido.</span>
+</div>
+</div>
+<!-- Explicit Safety Actions (Heuristic 3: User Control & Freedom) -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="h-11 px-space-lg rounded-xl bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors active:scale-95 flex items-center gap-1" onclick="closeDeleteDialog()" type="button">
+<span>Cancelar</span>
+</button>
+<button class="h-11 px-space-lg rounded-xl bg-error text-on-error font-label-lg text-label-lg hover:opacity-95 shadow-sm transition-all active:scale-95 flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-error focus:ring-offset-2" onclick="confirmDeleteAction()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Sim, excluir categoria</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification (Undo and Feedback Pattern - Heuristic 3 & 9) -->
+<div class="fixed bottom-6 right-8 z-50 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-sm rounded-xl shadow-xl flex items-center gap-space-md hidden transition-transform" id="undo-toast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-body-md text-body-md" id="toast-text">Categoria excluída com sucesso.</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="font-label-lg text-label-lg text-primary-fixed hover:underline px-2 py-1" onclick="undoLastAction()" type="button">
+        Desfazer
+      </button>
+<button class="w-6 h-6 flex items-center justify-center text-outline-variant hover:text-surface-lowest" onclick="document.getElementById('undo-toast').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const existingCategories = ['trabalho', 'pessoal', 'estudos', 'saúde', 'saude'];
+
+    window.handleInputChange = function(inputEl) {
+      const val = inputEl.value.trim().toLowerCase();
+      const counter = document.getElementById('char-counter');
+      const validationMsg = document.getElementById('input-validation-msg');
+      const validationText = document.getElementById('input-validation-text');
+      const addBtn = document.getElementById('btn-add-category');
+
+      counter.textContent = `${inputEl.value.length}/30`;
+
+      if (val.length === 0) {
+        validationMsg.classList.add('hidden');
+        addBtn.disabled = false;
+        return;
+      }
+
+      if (existingCategories.includes(val)) {
+        validationText.textContent = `A categoria "${inputEl.value.trim()}" já está cadastrada. Escolha outro nome.`;
+        validationMsg.classList.remove('hidden');
+        addBtn.disabled = true;
+        addBtn.classList.add('opacity-50', 'pointer-events-none');
+      } else {
+        validationMsg.classList.add('hidden');
+        addBtn.disabled = false;
+        addBtn.classList.remove('opacity-50', 'pointer-events-none');
+      }
+    };
+
+    window.handleCategoryAdd = function() {
+      const inputEl = document.getElementById('category-name-input');
+      const val = inputEl.value.trim();
+      const validationMsg = document.getElementById('input-validation-msg');
+      const validationText = document.getElementById('input-validation-text');
+
+      if (!val) {
+        validationText.textContent = 'O nome da categoria não pode ficar vazio.';
+        validationMsg.classList.remove('hidden');
+        inputEl.focus();
+        return;
+      }
+
+      if (existingCategories.includes(val.toLowerCase())) {
+        validationText.textContent = 'Esta categoria já existe na lista.';
+        validationMsg.classList.remove('hidden');
+        return;
+      }
+
+      // Add temporarily to mockup
+      existingCategories.push(val.toLowerCase());
+      inputEl.value = '';
+      document.getElementById('char-counter').textContent = '0/30';
+      
+      showToast(`Categoria "${val}" criada com sucesso!`);
+    };
+
+    window.openDeleteDialog = function(name, count) {
+      document.getElementById('category-target-name').textContent = name;
+      document.getElementById('category-task-count').textContent = `${count} ${count === 1 ? 'tarefa' : 'tarefas'}`;
+      document.getElementById('delete-confirmation-overlay').classList.remove('hidden');
+      document.getElementById('delete-confirmation-overlay').classList.add('flex');
+    };
+
+    window.closeDeleteDialog = function() {
+      const overlay = document.getElementById('delete-confirmation-overlay');
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+    };
+
+    window.confirmDeleteAction = function() {
+      const targetName = document.getElementById('category-target-name').textContent;
+      closeDeleteDialog();
+      showToast(`Categoria "${targetName}" excluída. Tarefas agora estão sem categoria.`);
+    };
+
+    window.showToast = function(msg) {
+      const toast = document.getElementById('undo-toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 6000);
+    };
+
+    window.undoLastAction = function() {
+      const toast = document.getElementById('undo-toast');
+      toast.classList.add('hidden');
+      showToast('Ação desfeita com sucesso.');
+    };
+  })();
+</script></main></div></body></html>
